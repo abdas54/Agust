@@ -1,0 +1,12 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+		confirm="handleConfirm">
+		<sortItems>
+			<ViewSettingsItem text="Company" key="Zbutxt" selected="true" />
+			<ViewSettingsItem text="Bank" key="Banka" />
+			
+		</sortItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

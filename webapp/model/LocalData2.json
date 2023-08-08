@@ -1,0 +1,62 @@
+{
+    "d" : {
+      "results" : [
+        {
+          
+          "DATJOURN" : "000000000058",
+          "ZahlposiLfdnr" : "000000000001",
+          "Banka" : "",
+          "KZbnkn" : "1234567899",
+          "Waers" : "SGD",
+          "Rbetr" : "-150.000",
+          "Vblnr" : "2000000012",
+          "Znme1" : "KTT Test Vendor",
+          "Znme2" : "",
+          "Belnr" : "1911500011",
+          "ZzscUrl" : "http://KTCOCRCONT-D.ktc.local:80//xFlowArchiveContentServer/ContentServer.svc/ContentServer/*?get&pVersion=0046&contRep=T1&docId=0405981151101EDCB1C8F0FBB2E10514&compId=data&accessMode=r&authId=CN%3DDEV&expiration=20221024114329&secKey=MIH3BgkqhkiG9w0BBwKggekwgeYCAQExCzAJBgUrDgMCGgUAMAsGCSqGSIb3DQEHATGBxjCBwwIBATAZMA4xDDAKBgNVBAMTA0RFVgIHIBISIBdFJzAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjIxMDI0MDk0MzI5WjAjBgkqhkiG9w0BCQQxFgQUc1AXf6AE0pniVERNRZ3GiHYQGhYwCQYHKoZIzjgEAwQuMCwCFBmgUEPJESgYZSsOiIht%2Fjl9YJ2dAhRUQ7kX7iQdzQ439iQtHLA9LUQA4w%3D%3D",
+          "results" : {
+            "results" : [
+              {
+                
+                "DATJOURN" : "000000000058",
+                "ZAHLPOSI_LFDNR" : "000000000001",
+                "Vblnr" : "2000000012",
+                "Belnr" : "1911500011",
+                "Count" : "00001",
+                "Waers" : "SGD",
+                "Wrbtr" : "150.000",
+                "ZzscUrl" : "http://KTCOCRCONT-D.ktc.local:80//xFlowArchiveContentServer/ContentServer.svc/ContentServer/*?get&pVersion=0046&contRep=T1&docId=0405981151101EDCB49AA128F1856514&compId=data&accessMode=r&authId=CN%3DDEV&expiration=20221024114329&secKey=MIH3BgkqhkiG9w0BBwKggekwgeYCAQExCzAJBgUrDgMCGgUAMAsGCSqGSIb3DQEHATGBxjCBwwIBATAZMA4xDDAKBgNVBAMTA0RFVgIHIBISIBdFJzAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjIxMDI0MDk0MzI5WjAjBgkqhkiG9w0BCQQxFgQUveOkTg0gCTuhJGuFR%2BccLp8fpGAwCQYHKoZIzjgEAwQuMCwCFC9535MZTBH5xa8k%2F4pooTasQth1AhR211uUeLHw4a7S%2BrP6rjV3OjMrpQ%3D%3D"
+              },
+              {
+                
+                "DATJOURN" : "000000000058",
+                "ZAHLPOSI_LFDNR" : "000000000001",
+                "Vblnr" : "2000000012",
+                "Belnr" : "1911500011",
+                "Count" : "00002",
+                "Waers" : "SGD",
+                "Wrbtr" : "150.000",
+                "ZzscUrl" : "http://KTCOCRCONT-D.ktc.local:80//xFlowArchiveContentServer/ContentServer.svc/ContentServer/*?get&pVersion=0046&contRep=T1&docId=0405981151101EECAEA851A934728630&compId=data&accessMode=r&authId=CN%3DDEV&expiration=20221024114329&secKey=MIH3BgkqhkiG9w0BBwKggekwgeYCAQExCzAJBgUrDgMCGgUAMAsGCSqGSIb3DQEHATGBxjCBwwIBATAZMA4xDDAKBgNVBAMTA0RFVgIHIBISIBdFJzAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjIxMDI0MDk0MzI5WjAjBgkqhkiG9w0BCQQxFgQUh15c2pkjEQLkRco9Ppi%2BWA%2Fjh2UwCQYHKoZIzjgEAwQuMCwCFENdHy7rnCtF7laBXhJv8w7rdvJ5AhRQpe25filcnBxVEunwuZxRDQCzjQ%3D%3D"
+              }
+            ]
+          }
+        },
+        {
+          
+          "DATJOURN" : "000000000059",
+          "ZahlposiLfdnr" : "000000000011",
+          "Banka" : "",
+          "KZbnkn" : "1234567899",
+          "Waers" : "SGD",
+          "Rbetr" : "-3000.000",
+          "Vblnr" : "2000000013",
+          "Znme1" : "KTT Test Vendor",
+          "Znme2" : "",
+          "Belnr" : "1911500019",
+          "ZzscUrl" : "http://KTCOCRCONT-D.ktc.local:80//xFlowArchiveContentServer/ContentServer.svc/ContentServer/*?get&pVersion=0046&contRep=T1&docId=0405981151101EECAEA851A934728630&compId=data&accessMode=r&authId=CN%3DDEV&expiration=20221024114329&secKey=MIH3BgkqhkiG9w0BBwKggekwgeYCAQExCzAJBgUrDgMCGgUAMAsGCSqGSIb3DQEHATGBxjCBwwIBATAZMA4xDDAKBgNVBAMTA0RFVgIHIBISIBdFJzAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjIxMDI0MDk0MzI5WjAjBgkqhkiG9w0BCQQxFgQUh15c2pkjEQLkRco9Ppi%2BWA%2Fjh2UwCQYHKoZIzjgEAwQuMCwCFEnRoXCb4s97deolUsM%2FPRk%2BJi41AhQ9Gb784rG8cq2uqq2GbA5WimPG3g%3D%3D"
+          
+          
+        }
+      ]
+    }
+  }

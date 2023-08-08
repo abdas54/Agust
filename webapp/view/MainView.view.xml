@@ -1,0 +1,90 @@
+<mvc:View controllerName="com.sap.bankapproverapp.controller.MainView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:semantic="sap.m.semantic" xmlns:ui="sap.ca.ui">
+    <semantic:FullscreenPage title="Bank Approver" showNavButton="false" navButtonPress="onNavButtonPress">
+        <semantic:content>
+
+        <Table class="tableCellColor" id="approveRecordsTable" width="auto" mode="MultiSelect" items="{/ZPY_BANK_HEADERSet}" noDataText="no data"
+				 growing="true" growingScrollToLoad="true" updateFinished="onUpdateFinished">
+				<headerToolbar>
+					<Toolbar>
+						<content>
+							<Title level="H2" text="Records"/>
+							<ToolbarSpacer/>
+							<Button id="btnSorting" icon="sap-icon://sort" press="handleSorting" />
+							
+							
+						</content>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+				<Column>
+						<Text text="Journal Number"/>
+					</Column>
+					<Column>
+						<Text text="Company"/>
+					</Column>
+					<Column>
+						<Text wrapping="true" text="Bank"/>
+					</Column>
+					<Column>
+						<Text wrapping="true" text="Account Number"/>
+					</Column>
+					<Column hAlign="Center">
+						<Text wrapping="true" text="Date"/>
+					</Column>
+					<Column hAlign="Center">
+						<Text wrapping="true" text="Time"/>
+					</Column>
+					<Column hAlign="Center">
+						<Text wrapping="true" text="Currency"/>
+					</Column>
+					<Column hAlign="Center">
+						<Text wrapping="true" text="Amount"/>
+					</Column>
+					<Column visible="true" hAlign="Center">
+						<Text wrapping="true" text="Export File Name"/>
+					</Column>
+					
+					
+				</columns>
+				<items>
+					<ColumnListItem press="onApproverItemPressed" type="Navigation">
+						<cells>
+						<Text text="{DATJOURN}"/>
+							<Text text="{Zbutxt}"/>
+                            <Text text="{Banka}"/>
+                            <Text text="{KZbnkn}"/>
+                            <Text text="{
+				path: 'Datum',
+				type: 'sap.ui.model.type.Date',
+				formatOptions: {
+					style: 'short',
+					pattern: 'dd/MM/yyyy'
+					
+				}
+			}"/>
+			<Text text="{
+				path: 'Timelo',
+				type: 'sap.ui.model.odata.type.Time',
+					formatOptions: {
+					pattern: 'HH:mm:ss'
+				}
+				
+			}"/>
+                            <!-- <Text text="{Timelo}"/> -->
+                            <Text text="{Waers}"/>
+                            <Text text="{Rbetr}"/>
+							<Text text="{EXPDATEINAME}"/>
+                            
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+        </semantic:content>
+        
+        <semantic:customFooterContent>
+            <Button text="Approve"  type="Accept" design="Positive" press="onPressSubmit" />
+            <Button text="Reject"  type="Reject" design="Negative" press="onPressReject" />
+            
+        </semantic:customFooterContent>
+    </semantic:FullscreenPage>
+</mvc:View>

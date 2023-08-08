@@ -1,0 +1,70 @@
+<mvc:View controllerName="com.sap.bankapproverapp.controller.DetailView" xmlns:semantic="sap.m.semantic" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m" xmlns:u="sap.ui.unified" xmlns:core="sap.ui.core">
+    <semantic:FullscreenPage title="Record Details" showNavButton="true" navButtonPress="onNavButtonPress">
+        <semantic:content>
+            <m:IconTabBar id="idIconTabBar" select=".onFilterSelect" class="sapUiResponsiveContentPadding">
+                <m:items>
+                    <m:IconTabFilter icon="sap-icon://attachment" text="Details">
+                        <TreeTable id="TreeTableBasic" rows="{path:'BankDetailModel>/BankDataView/results', parameters: {arrayNames:['results']}}" selectionMode="Single" enableSelectAll="false" ariaLabelledBy="title">
+                            <extension>
+                                <m:OverflowToolbar style="Clear">
+                                    <m:Title id="BankTitle" text="" />
+                                    <m:ToolbarSpacer />
+                                    <m:Text id="totalAmount" design="bold" text="" />
+                                </m:OverflowToolbar>
+                            </extension>
+                            <columns>
+                                <Column width="10rem">
+                                    <m:Label text="Payment Voucher" />
+                                    <template>
+                                        <m:Text text="{BankDetailModel>Vblnr}" wrapping="false" />
+                                    </template>
+                                </Column>
+                                <Column width="9rem">
+                                    <m:Label text="Vendor Name" />
+                                    <template>
+                                        <m:Text text="{BankDetailModel>Znme1} {BankDetailModel>Znme2}" wrapping="true" />
+                                    </template>
+                                </Column>
+                                <Column width="11rem">
+                                    <m:Label text="Vendor Bank Account" />
+                                    <template>
+                                        <m:Text text="{BankDetailModel>KZbnkn}" wrapping="true" />
+                                    </template>
+                                </Column>
+                                <Column width="11rem">
+                                    <m:Label text="Vendor Doc" />
+                                    <template>
+                                        <m:Text text="{BankDetailModel>Belnr}" wrapping="false" />
+                                    </template>
+                                </Column>
+                                <Column width="11rem">
+                                    <m:Label text="Currency" />
+                                    <template>
+                                        <m:Text text="{BankDetailModel>Waers}" wrapping="false" />
+                                    </template>
+                                </Column>
+                                <Column width="11rem">
+                                    <m:Label text="Amount" />
+                                    <template>
+                                        <m:Text text="{BankDetailModel>Rbetr}" wrapping="false" />
+                                    </template>
+                                </Column>
+                                <Column width="11rem">
+                                    <m:Label text="Attachment" />
+                                    <template>
+                                        <m:Link text="{BankDetailModel>ATTACHMENT_NAME}" target="_blank" href="{BankDetailModel>ZzscUrl}" />
+                                    </template>
+                                </Column>
+                            </columns>
+                        </TreeTable>
+                    </m:IconTabFilter>
+                </m:items>
+            </m:IconTabBar>
+        </semantic:content>
+
+        <semantic:customFooterContent>
+            <m:Button text="Approve" type="Accept" design="Positive" press="onPressSubmit" />
+            <m:Button text="Reject" type="Reject" design="Negative" press="onPressReject" />
+        </semantic:customFooterContent>
+    </semantic:FullscreenPage>
+</mvc:View>

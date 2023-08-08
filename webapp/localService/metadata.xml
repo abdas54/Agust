@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZPY_PAYMENT_BANK_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZPY_BANK_HEADER" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="DATJOURN"/>
+                    <PropertyRef Name="Zbutxt"/>
+                    <PropertyRef Name="Banka"/>
+                    <PropertyRef Name="KZbnkn"/>
+                </Key>
+                <Property Name="DATJOURN" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Journal number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zbutxt" Type="Edm.String" Nullable="false" MaxLength="25" sap:label="Ordering party" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Banka" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Bank name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="KZbnkn" Type="Edm.String" Nullable="false" MaxLength="19" sap:label="Contr. tot. acct. no" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Datum" Type="Edm.DateTime" Nullable="false" Precision="7" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Timelo" Type="Edm.Time" Nullable="false" Precision="0" sap:label="Field of type TIMS" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Waers" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rbetr" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="3" sap:label="Local curr.pmnt amnt" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZPY_BANK_ITEM" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="DATJOURN"/>
+                    <PropertyRef Name="ZahlposiLfdnr"/>
+                    <PropertyRef Name="Vblnr"/>
+                    <PropertyRef Name="Belnr"/>
+                </Key>
+                <Property Name="DATJOURN" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Journal number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ZahlposiLfdnr" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Payment item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Banka" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Bank name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="KZbnkn" Type="Edm.String" Nullable="false" MaxLength="19" sap:label="Contr. tot. acct. no" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Waers" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <Property Name="Rbetr" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:label="Local curr.pmnt amnt" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vblnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Payment doc.no." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Znme1" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Znme2" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Belnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Document Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ZzscUrl" Type="Edm.String" Nullable="false" MaxLength="4096" sap:label="URI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZPY_PAYMENT_BANK_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZPY_BANK_HEADERSet" EntityType="ZPY_PAYMENT_BANK_SRV.ZPY_BANK_HEADER" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ZPY_BANK_ITEMSet" EntityType="ZPY_PAYMENT_BANK_SRV.ZPY_BANK_ITEM" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://ktcsapdev.ktc.local:8081/sap/opu/odata/sap/ZPY_PAYMENT_BANK_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://ktcsapdev.ktc.local:8081/sap/opu/odata/sap/ZPY_PAYMENT_BANK_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

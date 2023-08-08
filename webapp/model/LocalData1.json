@@ -1,0 +1,22 @@
+{
+    
+      "dataView": {
+        "vendorDocuments": [
+          {"paymentVoucher": "1510000168", "vendorName": "SHINSUNG E&G LTD", "vendorBankAccount":"12345678","vendorDocument":"","currency" : "SGD", "Amount": "10000","Attachment":"Invoice.pdf","vendorDocuments":"" },
+          {"paymentVoucher": "1510000169", "vendorName": "ABC Pte Ltd","vendorBankAccount":"234567812","vendorDocument":"","currency" : "SGD", "Amount": "5000","Attachment":"PaymentVoucher.pdf","vendorDocuments":[
+            {"vendorDocument":"1909467521","currency" : "SGD", "Amount": "3000","Attachment":"Invoice1.pdf"},
+            {"vendorDocument":"","currency" : "", "Amount": "","Attachment":"Invoice2.pdf"},
+            {"vendorDocument":"190356789","currency" : "SGD", "Amount": "3000","Attachment":"Invoice3.pdf"},
+            {"vendorDocument":"19067865","currency" : "SGD", "Amount": "-1000","Attachment":"Invoice4.pdf"}
+          ]}
+
+           
+        ]}
+        
+        
+  
+      
+    
+    
+    
+}
